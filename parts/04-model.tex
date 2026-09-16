@@ -1,0 +1,64 @@
+\section{三层可靠性模型}\label{sec:model}
+
+\subsection{层次定义}
+
+我们把一段数学推理的可靠性链条拆成三层。设原始问题为 $q$，最终答案为 $a$。
+
+\begin{definition}[生成层 L1]\label{def:l1}
+生成层是一个映射 $G: q \mapsto r$，其中 $r$ 为自然语言形式的推理链（可含等式、数值与文字说明）。$r$ 由语言模型产生，其正确性只有语义层面的判据，没有可机械执行的检查程序。
+\end{definition}
+
+\begin{definition}[语义规约层 L2]\label{def:l2}
+语义规约层是一个映射 $S: r \mapsto \sigma$，其中 $\sigma$ 是\textbf{类型化中间表示}，其结构为四元组
+\[
+\sigma = \langle V,\; H,\; G_0,\; \tau \rangle,
+\]
+$V$ 是变量集合，每个变量带有类型与定义域 $v: (T_v, D_v)$；$H$ 是显式假设集合（含歧义消解时被选中的解释）；$G_0$ 是初始目标状态的类型化描述；$\tau = (s_1, s_2, \dots, s_n)$ 是状态变换序列，每一步 $s_i$ 由「所用假设 $\subseteq H$、施加的变换、结果状态」三部分组成。
+\end{definition}
+
+\begin{definition}[验证层 L3]\label{def:l3}
+验证层是一个判定过程 $V: \sigma \mapsto \{\textsf{pass}, \textsf{fail}, \textsf{counterexample}\}$。$V$ 的实现可以是约束求解、符号计算、数值回代、类型检查或证明助手内核。$V$ 的可靠性来自其\emph{实现的外部性}：判定结果不依赖于任何语言模型的语义判断。
+\end{definition}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  node distance=4mm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=9mm, text width=30mm, font=\small},
+  l1/.style={box, fill=orange!12},
+  l2/.style={box, fill=blue!12, very thick},
+  l3/.style={box, fill=green!12},
+  lbl/.style={font=\scriptsize\itshape, align=center}
+]
+\node[l1] (l1) {L1 生成层\\[1pt] \scriptsize 自然语言推理链 $r$};
+\node[l2, below=10mm of l1] (l2) {L2 语义规约层\\[1pt] \scriptsize 类型化中间表示 $\sigma$};
+\node[l3, below=10mm of l2] (l3) {L3 验证层\\[1pt] \scriptsize pass / fail / 反例};
+\draw[-{Latex[length=2.4mm]}] (l1) -- node[right, lbl, xshift=1mm] {$S:\; r \mapsto \sigma$\\（\textbf{本文重点}）} (l2);
+\draw[-{Latex[length=2.4mm]}] (l2) -- node[right, lbl, xshift=1mm] {$V:\; \sigma \mapsto$ 判定} (l3);
+\draw[-{Latex[length=2.4mm]}, dashed, gray] (l3.east) to[out=0,in=0] node[right, lbl, xshift=1mm] {结论归因\\（依赖 $S$ 的双向可追）} (l1.east);
+\node[lbl, left=14mm of l2, text width=26mm] {误差在此引入\\且对 L3 不可见};
+\draw[-{Latex[length=2mm]}, gray] (l2.west) -- (l2.west);
+\end{tikzpicture}
+\caption{三层可靠性模型。L1 产生自然语言推理，L2 将其规约为类型化中间表示，L3 对中间表示做机械判定。虚线表示结论回传：只有当 L2 双向可追（推论 R3）时，L3 的判定才能归因回原问题。}
+\label{fig:layers}
+\end{figure}
+
+\subsection{三条可检验推论}
+
+\begin{proposition}[R1：仅增强 L3 的边际收益递减]\label{prop:r1}
+固定 $G$，设 $p_{\text{err}}$ 为 L2 规约引入错误的概率。则端到端可靠性上界为
+\[
+P_{\text{ok}} \;\le\; 1 - p_{\text{err}} .
+\]
+该上界与 $V$ 的强度无关。因此，若 $p_{\text{err}}$ 不降，替换更强的求解器或证明助手无法把可靠性推高到 $1-p_{\text{err}}$ 以上——因为 L2 引入的误差在结构上对 L3 不可见（$V$ 只能检验 $\sigma$ 的性质，不能检验 $\sigma$ 与 $r$ 的一致性）。
+\end{proposition}
+
+\begin{proposition}[R2：L2 失效具有可分类结构]\label{prop:r2}
+L2 的失效不是同质的随机噪声，而是可归入有限类别的结构模式。若成立，则改进手段应当是「失效模式识别 + 定向检查」，而非单纯增大模型规模。
+\end{proposition}
+
+\begin{proposition}[R3：双向可追是可靠性的前提]\label{prop:r3}
+设 $S^{-1}$ 为把 $\sigma$ 还原为自然语言陈述的映射。若 $S \circ S^{-1}$ 与 $S^{-1} \circ S$ 不能在语义上近似恒等，则 L3 给出的判定的\emph{对象}与原始问题的\emph{目标}可能不一致，验证通过不构成对原问题的任何保证。
+\end{proposition}
+
+\paragraph{说明。}R1 是结构性论断而非经验定律：它的前提是“L3 只能访问 $\sigma$”。这一点在工程上普遍成立，因为验证器以 $\sigma$ 为唯一输入。R2 是分类学假设，其价值在于可操作性，而非完备性（见第 \ref{sec:limits} 节边界声明 2）。R3 是必要条件式的断言：它在逻辑上弱于“双向可追 $\Rightarrow$ 可靠”，只主张“不可追 $\Rightarrow$ 不可归因”。
