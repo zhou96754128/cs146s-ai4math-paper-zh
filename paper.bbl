@@ -1,0 +1,285 @@
+\begin{thebibliography}{31}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bertot and Castéran(2004)]{bertot2004interactive}
+Yves Bertot and Pierre Castéran.
+\newblock \emph{Interactive Theorem Proving and Program Development}.
+\newblock Springer Berlin Heidelberg, 2004.
+\newblock \doi{10.1007/978-3-662-07964-5}.
+\newblock URL \url{https://doi.org/10.1007/978-3-662-07964-5}.
+
+\bibitem[Biderman et~al.(2024)Biderman, Schoelkopf, Sutawika, Gao, Tow, Abbasi,
+  Aji, Ammanamanchi, Black, Clive, DiPofi, Etxaniz, Fattori, Forde, Foster,
+  Hsu, Jaiswal, Lee, Li, Lovering, Muennighoff, Pavlick, Phang, Skowron, Tan,
+  Tang, Wang, Winata, Yvon, and Zou]{biderman2024lessons}
+Stella Biderman, Hailey Schoelkopf, Lintang Sutawika, Leo Gao, Jonathan Tow,
+  Baber Abbasi, Alham~Fikri Aji, Pawan~Sasanka Ammanamanchi, Sidney Black,
+  Jordan Clive, Anthony DiPofi, Julen Etxaniz, Benjamin Fattori, Jessica~Zosa
+  Forde, Charles Foster, Jeffrey Hsu, Mimansa Jaiswal, Wilson~Y. Lee, Haonan
+  Li, Charles Lovering, Niklas Muennighoff, Ellie Pavlick, Jason Phang, Aviya
+  Skowron, Samson Tan, Xiangru Tang, Kevin~A. Wang, Genta~Indra Winata,
+  François Yvon, and Andy Zou.
+\newblock Lessons from the trenches on reproducible evaluation of language
+  models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2405.14782}.
+\newblock arXiv:2405.14782.
+
+\bibitem[Chen et~al.(2022)Chen, Ma, Wang, and Cohen]{chen2022program}
+Wenhu Chen, Xueguang Ma, Xinyi Wang, and William~W. Cohen.
+\newblock Program of thoughts prompting: Disentangling computation from
+  reasoning for numerical reasoning tasks, 2022.
+\newblock URL \url{https://arxiv.org/abs/2211.12588}.
+\newblock arXiv:2211.12588.
+
+\bibitem[Cobbe et~al.(2021)Cobbe, Kosaraju, Bavarian, Chen, Jun, Kaiser,
+  Plappert, Tworek, Hilton, Nakano, Hesse, and Schulman]{cobbe2021training}
+Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz
+  Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano,
+  Christopher Hesse, and John Schulman.
+\newblock Training verifiers to solve math word problems, 2021.
+\newblock URL \url{https://arxiv.org/abs/2110.14168}.
+\newblock arXiv:2110.14168.
+
+\bibitem[Gao et~al.(2022)Gao, Madaan, Zhou, Alon, Liu, Yang, Callan, and
+  Neubig]{gao2022pal}
+Luyu Gao, Aman Madaan, Shuyan Zhou, Uri Alon, Pengfei Liu, Yiming Yang, Jamie
+  Callan, and Graham Neubig.
+\newblock Pal: Program-aided language models, 2022.
+\newblock URL \url{https://arxiv.org/abs/2211.10435}.
+\newblock arXiv:2211.10435.
+
+\bibitem[Hendrycks et~al.(2021)Hendrycks, Burns, Kadavath, Arora, Basart, Tang,
+  Song, and Steinhardt]{hendrycks2021measuring}
+Dan Hendrycks, Collin Burns, Saurav Kadavath, Akul Arora, Steven Basart, Eric
+  Tang, Dawn Song, and Jacob Steinhardt.
+\newblock Measuring mathematical problem solving with the math dataset, 2021.
+\newblock URL \url{https://arxiv.org/abs/2103.03874}.
+\newblock arXiv:2103.03874.
+
+\bibitem[Huang et~al.(2023)Huang, Chen, Mishra, Zheng, Yu, Song, and
+  Zhou]{huang2023large}
+Jie Huang, Xinyun Chen, Swaroop Mishra, Huaixiu~Steven Zheng, Adams~Wei Yu,
+  Xinying Song, and Denny Zhou.
+\newblock Large language models cannot self-correct reasoning yet, 2023.
+\newblock URL \url{https://arxiv.org/abs/2310.01798}.
+\newblock arXiv:2310.01798.
+
+\bibitem[Jiang et~al.(2022)Jiang, Welleck, Zhou, Li, Liu, Jamnik, Lacroix, Wu,
+  and Lample]{jiang2022draft}
+Albert~Q. Jiang, Sean Welleck, Jin~Peng Zhou, Wenda Li, Jiacheng Liu, Mateja
+  Jamnik, Timothée Lacroix, Yuhuai Wu, and Guillaume Lample.
+\newblock Draft, sketch, and prove: Guiding formal theorem provers with
+  informal proofs, 2022.
+\newblock URL \url{https://arxiv.org/abs/2210.12283}.
+\newblock arXiv:2210.12283.
+
+\bibitem[Kambhampati et~al.(2024)Kambhampati, Valmeekam, Guan, Verma, Stechly,
+  Bhambri, Saldyt, and Murthy]{kambhampati2024llms}
+Subbarao Kambhampati, Karthik Valmeekam, Lin Guan, Mudit Verma, Kaya Stechly,
+  Siddhant Bhambri, Lucas Saldyt, and Anil Murthy.
+\newblock Llms can't plan, but can help planning in llm-modulo frameworks.
+\newblock \emph{Proceedings of the 41 st International Conference on Machine
+  Learning, Vienna, Austria. PMLR 235, 2024}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.01817}.
+\newblock arXiv:2402.01817.
+
+\bibitem[Kojima et~al.(2022)Kojima, Gu, Reid, Matsuo, and
+  Iwasawa]{kojima2022large}
+Takeshi Kojima, Shixiang~(Shane) Gu, Machel Reid, Yutaka Matsuo, and Yusuke
+  Iwasawa.
+\newblock Large language models are zero-shot reasoners.
+\newblock In \emph{Advances in Neural Information Processing Systems 35}, pages
+  22199--22213, 2022.
+\newblock \doi{10.52202/068431-1613}.
+\newblock URL \url{https://arxiv.org/abs/2205.11916}.
+\newblock arXiv:2205.11916.
+
+\bibitem[Lightman et~al.(2023)Lightman, Kosaraju, Burda, Edwards, Baker, Lee,
+  Leike, Schulman, Sutskever, and Cobbe]{lightman2023let}
+Hunter Lightman, Vineet Kosaraju, Yura Burda, Harri Edwards, Bowen Baker, Teddy
+  Lee, Jan Leike, John Schulman, Ilya Sutskever, and Karl Cobbe.
+\newblock Let's verify step by step, 2023.
+\newblock URL \url{https://arxiv.org/abs/2305.20050}.
+\newblock arXiv:2305.20050.
+
+\bibitem[mathlib Community(2020)]{mathlib2020lean}
+The mathlib Community.
+\newblock The lean mathematical library.
+\newblock In \emph{POPL '20: 47th Annual ACM SIGPLAN Symposium on Principles of
+  Programming Languages}, pages 367--381, 2020.
+\newblock \doi{10.1145/3372885.3373824}.
+\newblock URL \url{https://doi.org/10.1145/3372885.3373824}.
+
+\bibitem[Mirzadeh et~al.(2024)Mirzadeh, Alizadeh, Shahrokhi, Tuzel, Bengio, and
+  Farajtabar]{mirzadeh2024gsm}
+Iman Mirzadeh, Keivan Alizadeh, Hooman Shahrokhi, Oncel Tuzel, Samy Bengio, and
+  Mehrdad Farajtabar.
+\newblock Gsm-symbolic: Understanding the limitations of mathematical reasoning
+  in large language models, 2024.
+\newblock URL \url{https://arxiv.org/abs/2410.05229}.
+\newblock arXiv:2410.05229.
+
+\bibitem[Moura and Ullrich(2021)]{moura2021lean}
+Leonardo~de Moura and Sebastian Ullrich.
+\newblock The lean 4 theorem prover and programming language.
+\newblock In \emph{Lecture Notes in Computer Science}, pages 625--635, 2021.
+\newblock \doi{10.1007/978-3-030-79876-5_37}.
+\newblock URL \url{https://doi.org/10.1007/978-3-030-79876-5_37}.
+
+\bibitem[Ni et~al.(2023)Ni, Jiang, wu, Shen, and Zhou]{ni2023evaluating}
+Yuansheng Ni, Sichao Jiang, Xinyu wu, Hui Shen, and Yuli Zhou.
+\newblock Evaluating the robustness to instructions of large language models,
+  2023.
+\newblock URL \url{https://arxiv.org/abs/2308.14306}.
+\newblock arXiv:2308.14306.
+
+\bibitem[Polu and Sutskever(2020)]{polu2020generative}
+Stanislas Polu and Ilya Sutskever.
+\newblock Generative language modeling for automated theorem proving, 2020.
+\newblock URL \url{https://arxiv.org/abs/2009.03393}.
+\newblock arXiv:2009.03393.
+
+\bibitem[Sainz et~al.(2023)Sainz, Campos, García-Ferrero, Etxaniz, de~Lacalle,
+  and Agirre]{sainz2023nlp}
+Oscar Sainz, Jon Campos, Iker García-Ferrero, Julen Etxaniz, Oier~Lopez
+  de~Lacalle, and Eneko Agirre.
+\newblock Nlp evaluation in trouble: On the need to measure llm data
+  contamination for each benchmark.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  EMNLP 2023}, pages 10776--10787, 2023.
+\newblock \doi{10.18653/v1/2023.findings-emnlp.722}.
+\newblock URL \url{https://arxiv.org/abs/2310.18018}.
+\newblock arXiv:2310.18018.
+
+\bibitem[Schick et~al.(2023)Schick, Dwivedi-Yu, Dessi, Raileanu, Lomeli,
+  Hambro, Zettlemoyer, Cancedda, and Scialom]{schick2023toolformer}
+Timo Schick, Jane Dwivedi-Yu, Roberto Dessi, Roberta Raileanu, Maria Lomeli,
+  Eric Hambro, Luke Zettlemoyer, Nicola Cancedda, and Thomas Scialom.
+\newblock Toolformer: Language models can teach themselves to use tools.
+\newblock In \emph{Advances in Neural Information Processing Systems 36}, pages
+  68539--68551, 2023.
+\newblock \doi{10.52202/075280-2997}.
+\newblock URL \url{https://arxiv.org/abs/2302.04761}.
+\newblock arXiv:2302.04761.
+
+\bibitem[Stechly et~al.(2023)Stechly, Marquez, and Kambhampati]{stechly2023gpt}
+Kaya Stechly, Matthew Marquez, and Subbarao Kambhampati.
+\newblock Gpt-4 doesn't know it's wrong: An analysis of iterative prompting for
+  reasoning problems, 2023.
+\newblock URL \url{https://arxiv.org/abs/2310.12397}.
+\newblock arXiv:2310.12397.
+
+\bibitem[Szegedy(2020)]{szegedy2020promising}
+Christian Szegedy.
+\newblock A promising path towards autoformalization and general artificial
+  intelligence.
+\newblock In \emph{Lecture Notes in Computer Science}, pages 3--20, 2020.
+\newblock \doi{10.1007/978-3-030-53518-6_1}.
+\newblock URL \url{https://doi.org/10.1007/978-3-030-53518-6_1}.
+
+\bibitem[Thakur et~al.(2023)Thakur, Tsoukalas, Wen, Xin, and
+  Chaudhuri]{thakur2023context}
+Amitayush Thakur, George Tsoukalas, Yeming Wen, Jimmy Xin, and Swarat
+  Chaudhuri.
+\newblock An in-context learning agent for formal theorem-proving, 2023.
+\newblock URL \url{https://arxiv.org/abs/2310.04353}.
+\newblock arXiv:2310.04353.
+
+\bibitem[Trinh et~al.(2024)Trinh, Wu, Le, He, and Luong]{trinh2024solving}
+Trieu~H. Trinh, Yuhuai Wu, Quoc~V. Le, He~He, and Thang Luong.
+\newblock Solving olympiad geometry without human demonstrations.
+\newblock \emph{Nature}, 625\penalty0 (7995):\penalty0 476--482, 2024.
+\newblock \doi{10.1038/s41586-023-06747-5}.
+\newblock URL \url{https://doi.org/10.1038/s41586-023-06747-5}.
+
+\bibitem[Uesato et~al.(2022)Uesato, Kushman, Kumar, Song, Siegel, Wang,
+  Creswell, Irving, and Higgins]{uesato2022solving}
+Jonathan Uesato, Nate Kushman, Ramana Kumar, Francis Song, Noah Siegel, Lisa
+  Wang, Antonia Creswell, Geoffrey Irving, and Irina Higgins.
+\newblock Solving math word problems with process- and outcome-based feedback,
+  2022.
+\newblock URL \url{https://arxiv.org/abs/2211.14275}.
+\newblock arXiv:2211.14275.
+
+\bibitem[Wadler(2015)]{wadler2015propositions}
+Philip Wadler.
+\newblock Propositions as types.
+\newblock \emph{Communications of the ACM}, 58\penalty0 (12):\penalty0 75--84,
+  2015.
+\newblock \doi{10.1145/2699407}.
+\newblock URL \url{https://doi.org/10.1145/2699407}.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le,
+  and Zhou]{wei2022chain}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia,
+  Ed~Chi, Quoc~V Le, and Denny Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language
+  models.
+\newblock In \emph{Advances in Neural Information Processing Systems 35}, pages
+  24824--24837, 2022.
+\newblock \doi{10.52202/068431-1800}.
+\newblock URL \url{https://arxiv.org/abs/2201.11903}.
+\newblock arXiv:2201.11903.
+
+\bibitem[Wu et~al.(2022)Wu, Jiang, Li, Rabe, Staats, Jamnik, and
+  Szegedy]{wu2022autoformalization}
+Yuhuai Wu, Albert~Qiaochu Jiang, Wenda Li, Markus Rabe, Charles Staats, Mateja
+  Jamnik, and Christian Szegedy.
+\newblock Autoformalization with large language models.
+\newblock In \emph{Advances in Neural Information Processing Systems 35}, pages
+  32353--32368, 2022.
+\newblock \doi{10.52202/068431-2344}.
+\newblock URL \url{https://arxiv.org/abs/2205.12615}.
+\newblock arXiv:2205.12615.
+
+\bibitem[Xin et~al.(2024)Xin, Ren, Song, Shao, Zhao, Wang, Liu, Zhang, Lu, Du,
+  Gao, Zhu, Yang, Gou, Wu, Luo, and Ruan]{xin2024deepseek}
+Huajian Xin, Z.~Z. Ren, Junxiao Song, Zhihong Shao, Wanjia Zhao, Haocheng Wang,
+  Bo~Liu, Liyue Zhang, Xuan Lu, Qiushi Du, Wenjun Gao, Qihao Zhu, Dejian Yang,
+  Zhibin Gou, Z.~F. Wu, Fuli Luo, and Chong Ruan.
+\newblock Deepseek-prover-v1.5: Harnessing proof assistant feedback for
+  reinforcement learning and monte-carlo tree search, 2024.
+\newblock URL \url{https://arxiv.org/abs/2408.08152}.
+\newblock arXiv:2408.08152.
+
+\bibitem[Yang et~al.(2023)Yang, Swope, Gu, Chalamala, Song, Yu, Godil, Prenger,
+  and Anandkumar]{yang2023leandojo}
+Kaiyu Yang, Aidan Swope, Alex Gu, Rahul Chalamala, Peiyang Song, Shixing Yu,
+  Saad Godil, Ryan~J Prenger, and Animashree Anandkumar.
+\newblock Leandojo: Theorem proving with retrieval-augmented language models.
+\newblock In \emph{Advances in Neural Information Processing Systems 36}, pages
+  21573--21612, 2023.
+\newblock \doi{10.52202/075280-0944}.
+\newblock URL \url{https://arxiv.org/abs/2306.15626}.
+\newblock arXiv:2306.15626.
+
+\bibitem[Zheng et~al.(2021)Zheng, Han, and Polu]{zheng2021minif}
+Kunhao Zheng, Jesse~Michael Han, and Stanislas Polu.
+\newblock Minif2f: a cross-system benchmark for formal olympiad-level
+  mathematics, 2021.
+\newblock URL \url{https://arxiv.org/abs/2109.00110}.
+\newblock arXiv:2109.00110.
+
+\bibitem[Zhou et~al.(2023)Zhou, Wang, Lu, Shi, Luo, Qin, Lu, Jia, Song, Zhan,
+  and Li]{zhou2023solving}
+Aojun Zhou, Ke~Wang, Zimu Lu, Weikang Shi, Sichun Luo, Zipeng Qin, Shaoqing Lu,
+  Anya Jia, Linqi Song, Mingjie Zhan, and Hongsheng Li.
+\newblock Solving challenging math word problems using gpt-4 code interpreter
+  with code-based self-verification, 2023.
+\newblock URL \url{https://arxiv.org/abs/2308.07921}.
+\newblock arXiv:2308.07921.
+
+\bibitem[Zhou et~al.(2024)Zhou, Staats, Li, Szegedy, Weinberger, and
+  Wu]{zhou2024don}
+Jin~Peng Zhou, Charles Staats, Wenda Li, Christian Szegedy, Kilian~Q.
+  Weinberger, and Yuhuai Wu.
+\newblock Don't trust: Verify -- grounding llm quantitative reasoning with
+  autoformalization, 2024.
+\newblock URL \url{https://arxiv.org/abs/2403.18120}.
+\newblock arXiv:2403.18120.
+
+\end{thebibliography}
