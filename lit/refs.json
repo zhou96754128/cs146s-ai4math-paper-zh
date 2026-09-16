@@ -1,0 +1,793 @@
+{
+ "arxiv": {
+  "2009.03393": {
+   "arxiv_id": "2009.03393",
+   "title": "Generative Language Modeling for Automated Theorem Proving",
+   "authors": [
+    "Stanislas Polu",
+    "Ilya Sutskever"
+   ],
+   "published": "2020-09-07",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2009.03393"
+  },
+  "2306.15626": {
+   "arxiv_id": "2306.15626",
+   "title": "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models",
+   "authors": [
+    "Kaiyu Yang",
+    "Aidan M. Swope",
+    "Alex Gu",
+    "Rahul Chalamala",
+    "Peiyang Song",
+    "Shixing Yu",
+    "Saad Godil",
+    "Ryan Prenger",
+    "Anima Anandkumar"
+   ],
+   "published": "2023-06-27",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2306.15626"
+  },
+  "2201.11903": {
+   "arxiv_id": "2201.11903",
+   "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
+   "authors": [
+    "Jason Wei",
+    "Xuezhi Wang",
+    "Dale Schuurmans",
+    "Maarten Bosma",
+    "Brian Ichter",
+    "Fei Xia",
+    "Ed Chi",
+    "Quoc Le",
+    "Denny Zhou"
+   ],
+   "published": "2022-01-28",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2201.11903"
+  },
+  "2402.01817": {
+   "arxiv_id": "2402.01817",
+   "title": "LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+   "authors": [
+    "Subbarao Kambhampati",
+    "Karthik Valmeekam",
+    "Lin Guan",
+    "Mudit Verma",
+    "Kaya Stechly",
+    "Siddhant Bhambri",
+    "Lucas Saldyt",
+    "Anil Murthy"
+   ],
+   "published": "2024-02-02",
+   "journal_ref": "Proceedings of the 41 st International Conference on Machine Learning, Vienna, Austria. PMLR 235, 2024",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2402.01817"
+  },
+  "2205.12615": {
+   "arxiv_id": "2205.12615",
+   "title": "Autoformalization with Large Language Models",
+   "authors": [
+    "Yuhuai Wu",
+    "Albert Q. Jiang",
+    "Wenda Li",
+    "Markus N. Rabe",
+    "Charles Staats",
+    "Mateja Jamnik",
+    "Christian Szegedy"
+   ],
+   "published": "2022-05-25",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2205.12615"
+  },
+  "2211.14275": {
+   "arxiv_id": "2211.14275",
+   "title": "Solving math word problems with process- and outcome-based feedback",
+   "authors": [
+    "Jonathan Uesato",
+    "Nate Kushman",
+    "Ramana Kumar",
+    "Francis Song",
+    "Noah Siegel",
+    "Lisa Wang",
+    "Antonia Creswell",
+    "Geoffrey Irving",
+    "Irina Higgins"
+   ],
+   "published": "2022-11-25",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2211.14275"
+  },
+  "2211.12588": {
+   "arxiv_id": "2211.12588",
+   "title": "Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks",
+   "authors": [
+    "Wenhu Chen",
+    "Xueguang Ma",
+    "Xinyi Wang",
+    "William W. Cohen"
+   ],
+   "published": "2022-11-22",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2211.12588"
+  },
+  "2305.20050": {
+   "arxiv_id": "2305.20050",
+   "title": "Let's Verify Step by Step",
+   "authors": [
+    "Hunter Lightman",
+    "Vineet Kosaraju",
+    "Yura Burda",
+    "Harri Edwards",
+    "Bowen Baker",
+    "Teddy Lee",
+    "Jan Leike",
+    "John Schulman",
+    "Ilya Sutskever",
+    "Karl Cobbe"
+   ],
+   "published": "2023-05-31",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2305.20050"
+  },
+  "2310.12397": {
+   "arxiv_id": "2310.12397",
+   "title": "GPT-4 Doesn't Know It's Wrong: An Analysis of Iterative Prompting for Reasoning Problems",
+   "authors": [
+    "Kaya Stechly",
+    "Matthew Marquez",
+    "Subbarao Kambhampati"
+   ],
+   "published": "2023-10-19",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2310.12397"
+  },
+  "2110.14168": {
+   "arxiv_id": "2110.14168",
+   "title": "Training Verifiers to Solve Math Word Problems",
+   "authors": [
+    "Karl Cobbe",
+    "Vineet Kosaraju",
+    "Mohammad Bavarian",
+    "Mark Chen",
+    "Heewoo Jun",
+    "Lukasz Kaiser",
+    "Matthias Plappert",
+    "Jerry Tworek",
+    "Jacob Hilton",
+    "Reiichiro Nakano",
+    "Christopher Hesse",
+    "John Schulman"
+   ],
+   "published": "2021-10-27",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2110.14168"
+  },
+  "2302.04761": {
+   "arxiv_id": "2302.04761",
+   "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+   "authors": [
+    "Timo Schick",
+    "Jane Dwivedi-Yu",
+    "Roberto Dessì",
+    "Roberta Raileanu",
+    "Maria Lomeli",
+    "Luke Zettlemoyer",
+    "Nicola Cancedda",
+    "Thomas Scialom"
+   ],
+   "published": "2023-02-09",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2302.04761"
+  },
+  "2310.04353": {
+   "arxiv_id": "2310.04353",
+   "title": "An In-Context Learning Agent for Formal Theorem-Proving",
+   "authors": [
+    "Amitayush Thakur",
+    "George Tsoukalas",
+    "Yeming Wen",
+    "Jimmy Xin",
+    "Swarat Chaudhuri"
+   ],
+   "published": "2023-10-06",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2310.04353"
+  },
+  "2310.18018": {
+   "arxiv_id": "2310.18018",
+   "title": "NLP Evaluation in trouble: On the Need to Measure LLM Data Contamination for each Benchmark",
+   "authors": [
+    "Oscar Sainz",
+    "Jon Ander Campos",
+    "Iker García-Ferrero",
+    "Julen Etxaniz",
+    "Oier Lopez de Lacalle",
+    "Eneko Agirre"
+   ],
+   "published": "2023-10-27",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2310.18018"
+  },
+  "2308.14306": {
+   "arxiv_id": "2308.14306",
+   "title": "Evaluating the Robustness to Instructions of Large Language Models",
+   "authors": [
+    "Yuansheng Ni",
+    "Sichao Jiang",
+    "Xinyu wu",
+    "Hui Shen",
+    "Yuli Zhou"
+   ],
+   "published": "2023-08-28",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2308.14306"
+  },
+  "2210.12283": {
+   "arxiv_id": "2210.12283",
+   "title": "Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs",
+   "authors": [
+    "Albert Q. Jiang",
+    "Sean Welleck",
+    "Jin Peng Zhou",
+    "Wenda Li",
+    "Jiacheng Liu",
+    "Mateja Jamnik",
+    "Timothée Lacroix",
+    "Yuhuai Wu",
+    "Guillaume Lample"
+   ],
+   "published": "2022-10-21",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2210.12283"
+  },
+  "2109.00110": {
+   "arxiv_id": "2109.00110",
+   "title": "MiniF2F: a cross-system benchmark for formal Olympiad-level mathematics",
+   "authors": [
+    "Kunhao Zheng",
+    "Jesse Michael Han",
+    "Stanislas Polu"
+   ],
+   "published": "2021-08-31",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2109.00110"
+  },
+  "2103.03874": {
+   "arxiv_id": "2103.03874",
+   "title": "Measuring Mathematical Problem Solving With the MATH Dataset",
+   "authors": [
+    "Dan Hendrycks",
+    "Collin Burns",
+    "Saurav Kadavath",
+    "Akul Arora",
+    "Steven Basart",
+    "Eric Tang",
+    "Dawn Song",
+    "Jacob Steinhardt"
+   ],
+   "published": "2021-03-05",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2103.03874"
+  },
+  "2310.01798": {
+   "arxiv_id": "2310.01798",
+   "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+   "authors": [
+    "Jie Huang",
+    "Xinyun Chen",
+    "Swaroop Mishra",
+    "Huaixiu Steven Zheng",
+    "Adams Wei Yu",
+    "Xinying Song",
+    "Denny Zhou"
+   ],
+   "published": "2023-10-03",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2310.01798"
+  },
+  "2211.10435": {
+   "arxiv_id": "2211.10435",
+   "title": "PAL: Program-aided Language Models",
+   "authors": [
+    "Luyu Gao",
+    "Aman Madaan",
+    "Shuyan Zhou",
+    "Uri Alon",
+    "Pengfei Liu",
+    "Yiming Yang",
+    "Jamie Callan",
+    "Graham Neubig"
+   ],
+   "published": "2022-11-18",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2211.10435"
+  },
+  "2403.18120": {
+   "arxiv_id": "2403.18120",
+   "title": "Don't Trust: Verify -- Grounding LLM Quantitative Reasoning with Autoformalization",
+   "authors": [
+    "Jin Peng Zhou",
+    "Charles Staats",
+    "Wenda Li",
+    "Christian Szegedy",
+    "Kilian Q. Weinberger",
+    "Yuhuai Wu"
+   ],
+   "published": "2024-03-26",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2403.18120"
+  },
+  "2205.11916": {
+   "arxiv_id": "2205.11916",
+   "title": "Large Language Models are Zero-Shot Reasoners",
+   "authors": [
+    "Takeshi Kojima",
+    "Shixiang Shane Gu",
+    "Machel Reid",
+    "Yutaka Matsuo",
+    "Yusuke Iwasawa"
+   ],
+   "published": "2022-05-24",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2205.11916"
+  },
+  "2408.08152": {
+   "arxiv_id": "2408.08152",
+   "title": "DeepSeek-Prover-V1.5: Harnessing Proof Assistant Feedback for Reinforcement Learning and Monte-Carlo Tree Search",
+   "authors": [
+    "Huajian Xin",
+    "Z. Z. Ren",
+    "Junxiao Song",
+    "Zhihong Shao",
+    "Wanjia Zhao",
+    "Haocheng Wang",
+    "Bo Liu",
+    "Liyue Zhang",
+    "Xuan Lu",
+    "Qiushi Du",
+    "Wenjun Gao",
+    "Qihao Zhu",
+    "Dejian Yang",
+    "Zhibin Gou",
+    "Z. F. Wu",
+    "Fuli Luo",
+    "Chong Ruan"
+   ],
+   "published": "2024-08-15",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2408.08152"
+  },
+  "2308.07921": {
+   "arxiv_id": "2308.07921",
+   "title": "Solving Challenging Math Word Problems Using GPT-4 Code Interpreter with Code-based Self-Verification",
+   "authors": [
+    "Aojun Zhou",
+    "Ke Wang",
+    "Zimu Lu",
+    "Weikang Shi",
+    "Sichun Luo",
+    "Zipeng Qin",
+    "Shaoqing Lu",
+    "Anya Jia",
+    "Linqi Song",
+    "Mingjie Zhan",
+    "Hongsheng Li"
+   ],
+   "published": "2023-08-15",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2308.07921"
+  },
+  "2410.05229": {
+   "arxiv_id": "2410.05229",
+   "title": "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models",
+   "authors": [
+    "Iman Mirzadeh",
+    "Keivan Alizadeh",
+    "Hooman Shahrokhi",
+    "Oncel Tuzel",
+    "Samy Bengio",
+    "Mehrdad Farajtabar"
+   ],
+   "published": "2024-10-07",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2410.05229"
+  },
+  "2405.14782": {
+   "arxiv_id": "2405.14782",
+   "title": "Lessons from the Trenches on Reproducible Evaluation of Language Models",
+   "authors": [
+    "Stella Biderman",
+    "Hailey Schoelkopf",
+    "Lintang Sutawika",
+    "Leo Gao",
+    "Jonathan Tow",
+    "Baber Abbasi",
+    "Alham Fikri Aji",
+    "Pawan Sasanka Ammanamanchi",
+    "Sidney Black",
+    "Jordan Clive",
+    "Anthony DiPofi",
+    "Julen Etxaniz",
+    "Benjamin Fattori",
+    "Jessica Zosa Forde",
+    "Charles Foster",
+    "Jeffrey Hsu",
+    "Mimansa Jaiswal",
+    "Wilson Y. Lee",
+    "Haonan Li",
+    "Charles Lovering",
+    "Niklas Muennighoff",
+    "Ellie Pavlick",
+    "Jason Phang",
+    "Aviya Skowron",
+    "Samson Tan",
+    "Xiangru Tang",
+    "Kevin A. Wang",
+    "Genta Indra Winata",
+    "François Yvon",
+    "Andy Zou"
+   ],
+   "published": "2024-05-23",
+   "journal_ref": "",
+   "arxiv_doi": "",
+   "abs_url": "https://arxiv.org/abs/2405.14782"
+  }
+ },
+ "crossref_doi": {
+  "10.1007/978-3-030-79876-5_37": {
+   "ok": true,
+   "doi": "10.1007/978-3-030-79876-5_37",
+   "title": "The Lean 4 Theorem Prover and Programming Language",
+   "authors": [
+    "Moura, Leonardo de",
+    "Ullrich, Sebastian"
+   ],
+   "container": "Lecture Notes in Computer Science",
+   "publisher": "Springer International Publishing",
+   "year": 2021,
+   "type": "book-chapter",
+   "volume": "",
+   "issue": "",
+   "page": "625-635",
+   "event": ""
+  },
+  "10.1145/3372885.3373824": {
+   "ok": true,
+   "doi": "10.1145/3372885.3373824",
+   "title": "The lean mathematical library",
+   "authors": [
+    "The mathlib Community"
+   ],
+   "container": "Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs",
+   "publisher": "ACM",
+   "year": 2020,
+   "type": "proceedings-article",
+   "volume": "",
+   "issue": "",
+   "page": "367-381",
+   "event": "POPL '20: 47th Annual ACM SIGPLAN Symposium on Principles of Programming Languages"
+  },
+  "10.1145/2699407": {
+   "ok": true,
+   "doi": "10.1145/2699407",
+   "title": "Propositions as types",
+   "authors": [
+    "Wadler, Philip"
+   ],
+   "container": "Communications of the ACM",
+   "publisher": "Association for Computing Machinery (ACM)",
+   "year": 2015,
+   "type": "journal-article",
+   "volume": "58",
+   "issue": "12",
+   "page": "75-84",
+   "event": ""
+  },
+  "10.1007/978-3-030-53518-6_1": {
+   "ok": true,
+   "doi": "10.1007/978-3-030-53518-6_1",
+   "title": "A Promising Path Towards Autoformalization and General Artificial Intelligence",
+   "authors": [
+    "Szegedy, Christian"
+   ],
+   "container": "Lecture Notes in Computer Science",
+   "publisher": "Springer International Publishing",
+   "year": 2020,
+   "type": "book-chapter",
+   "volume": "",
+   "issue": "",
+   "page": "3-20",
+   "event": ""
+  },
+  "10.1038/s41586-023-06747-5": {
+   "ok": true,
+   "doi": "10.1038/s41586-023-06747-5",
+   "title": "Solving olympiad geometry without human demonstrations",
+   "authors": [
+    "Trinh, Trieu H.",
+    "Wu, Yuhuai",
+    "Le, Quoc V.",
+    "He, He",
+    "Luong, Thang"
+   ],
+   "container": "Nature",
+   "publisher": "Springer Science and Business Media LLC",
+   "year": 2024,
+   "type": "journal-article",
+   "volume": "625",
+   "issue": "7995",
+   "page": "476-482",
+   "event": ""
+  },
+  "10.1007/978-3-662-07964-5": {
+   "ok": true,
+   "doi": "10.1007/978-3-662-07964-5",
+   "title": "Interactive Theorem Proving and Program Development",
+   "authors": [
+    "Bertot, Yves",
+    "Castéran, Pierre"
+   ],
+   "container": "Texts in Theoretical Computer Science An EATCS Series",
+   "publisher": "Springer Berlin Heidelberg",
+   "year": 2004,
+   "type": "book",
+   "volume": "",
+   "issue": "",
+   "page": "",
+   "event": ""
+  }
+ },
+ "title_lookup": {
+  "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models": {
+   "ok": true,
+   "doi": "10.52202/068431-1800",
+   "title": "Chain-Of-Thought Prompting Elicits Reasoning in Large Language Models",
+   "authors": [
+    "Wei, Jason",
+    "Wang, Xuezhi",
+    "Schuurmans, Dale",
+    "Bosma, Maarten",
+    "Ichter, Brian",
+    "Xia, Fei",
+    "Chi, Ed",
+    "Le, Quoc V",
+    "Zhou, Denny"
+   ],
+   "container": "Advances in Neural Information Processing Systems 35",
+   "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+   "year": 2022,
+   "type": "proceedings-article",
+   "volume": "",
+   "issue": "",
+   "page": "24824-24837",
+   "event": "Advances in Neural Information Processing Systems 35",
+   "match_sim": 1.0,
+   "query_title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+  },
+  "Large Language Models are Zero-Shot Reasoners": {
+   "ok": true,
+   "doi": "10.52202/068431-1613",
+   "title": "Large Language Models Are Zero-Shot Reasoners",
+   "authors": [
+    "Kojima, Takeshi",
+    "Gu, Shixiang (Shane)",
+    "Reid, Machel",
+    "Matsuo, Yutaka",
+    "Iwasawa, Yusuke"
+   ],
+   "container": "Advances in Neural Information Processing Systems 35",
+   "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+   "year": 2022,
+   "type": "proceedings-article",
+   "volume": "",
+   "issue": "",
+   "page": "22199-22213",
+   "event": "Advances in Neural Information Processing Systems 35",
+   "match_sim": 1.0,
+   "query_title": "Large Language Models are Zero-Shot Reasoners"
+  },
+  "Large Language Models Cannot Self-Correct Reasoning Yet": {
+   "ok": false,
+   "query_title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+   "best_sim": 0.625,
+   "best_title": "Imitation versus Innovation: What children can do that large language and language-and-vision models cannot (yet)?"
+  },
+  "Let's Verify Step by Step": {
+   "ok": false,
+   "query_title": "Let's Verify Step by Step",
+   "best_sim": 0.6,
+   "best_title": "How Do I Verify KYC in Kraken? Step by Step 2026"
+  },
+  "Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks": {
+   "ok": false,
+   "query_title": "Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks",
+   "best_sim": 0.667,
+   "best_title": "Signs, Thoughts, Reasoning"
+  },
+  "PAL: Program-aided Language Models": {
+   "ok": false,
+   "query_title": "PAL: Program-aided Language Models",
+   "best_sim": 0.8,
+   "best_title": "Empowering Multi-step Reasoning across Languages via Program-Aided Language Models"
+  },
+  "Toolformer: Language Models Can Teach Themselves to Use Tools": {
+   "ok": true,
+   "doi": "10.52202/075280-2997",
+   "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+   "authors": [
+    "Schick, Timo",
+    "Dwivedi-Yu, Jane",
+    "Dessi, Roberto",
+    "Raileanu, Roberta",
+    "Lomeli, Maria",
+    "Hambro, Eric",
+    "Zettlemoyer, Luke",
+    "Cancedda, Nicola",
+    "Scialom, Thomas"
+   ],
+   "container": "Advances in Neural Information Processing Systems 36",
+   "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+   "year": 2023,
+   "type": "proceedings-article",
+   "volume": "",
+   "issue": "",
+   "page": "68539-68551",
+   "event": "Advances in Neural Information Processing Systems 36",
+   "match_sim": 1.0,
+   "query_title": "Toolformer: Language Models Can Teach Themselves to Use Tools"
+  },
+  "Autoformalization with Large Language Models": {
+   "ok": true,
+   "doi": "10.52202/068431-2344",
+   "title": "Autoformalization with Large Language Models",
+   "authors": [
+    "Wu, Yuhuai",
+    "Jiang, Albert Qiaochu",
+    "Li, Wenda",
+    "Rabe, Markus",
+    "Staats, Charles",
+    "Jamnik, Mateja",
+    "Szegedy, Christian"
+   ],
+   "container": "Advances in Neural Information Processing Systems 35",
+   "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+   "year": 2022,
+   "type": "proceedings-article",
+   "volume": "",
+   "issue": "",
+   "page": "32353-32368",
+   "event": "Advances in Neural Information Processing Systems 35",
+   "match_sim": 1.0,
+   "query_title": "Autoformalization with Large Language Models"
+  },
+  "Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs": {
+   "ok": false,
+   "query_title": "Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs",
+   "best_sim": 0.6,
+   "best_title": "Inducing theorem provers from proofs"
+  },
+  "Don't Trust: Verify -- Grounding LLM Quantitative Reasoning with Autoformalization": {
+   "ok": false,
+   "query_title": "Don't Trust: Verify -- Grounding LLM Quantitative Reasoning with Autoformalization",
+   "best_sim": 0.375,
+   "best_title": "SIFT: Grounding LLM Reasoning in Contexts via Stickers"
+  },
+  "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models": {
+   "ok": true,
+   "doi": "10.52202/075280-0944",
+   "title": "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models",
+   "authors": [
+    "Yang, Kaiyu",
+    "Swope, Aidan",
+    "Gu, Alex",
+    "Chalamala, Rahul",
+    "Song, Peiyang",
+    "Yu, Shixing",
+    "Godil, Saad",
+    "Prenger, Ryan J",
+    "Anandkumar, Animashree"
+   ],
+   "container": "Advances in Neural Information Processing Systems 36",
+   "publisher": "Neural Information Processing Systems Foundation, Inc. (NeurIPS)",
+   "year": 2023,
+   "type": "proceedings-article",
+   "volume": "",
+   "issue": "",
+   "page": "21573-21612",
+   "event": "Advances in Neural Information Processing Systems 36",
+   "match_sim": 1.0,
+   "query_title": "LeanDojo: Theorem Proving with Retrieval-Augmented Language Models"
+  },
+  "MiniF2F: a cross-system benchmark for formal Olympiad-level mathematics": {
+   "ok": false,
+   "query_title": "MiniF2F: a cross-system benchmark for formal Olympiad-level mathematics",
+   "best_sim": 0.333,
+   "best_title": "System-level Properties as Numerical Invariants"
+  },
+  "Training Verifiers to Solve Math Word Problems": {
+   "ok": false,
+   "query_title": "Training Verifiers to Solve Math Word Problems",
+   "best_sim": 0.714,
+   "best_title": "Misconception Analysis Borrowing From Literacy to Solve Math Word Problems With Technology"
+  },
+  "Measuring Mathematical Problem Solving With the MATH Dataset": {
+   "ok": false,
+   "query_title": "Measuring Mathematical Problem Solving With the MATH Dataset",
+   "best_sim": 0.667,
+   "best_title": "‘Problem-solving’? Or problem solving?"
+  },
+  "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models": {
+   "ok": false,
+   "query_title": "GSM-Symbolic: Understanding the Limitations of Mathematical Reasoning in Large Language Models",
+   "best_sim": 0.75,
+   "best_title": "Understanding Logical Reasoning Ability of Large Language Models"
+  },
+  "Solving math word problems with process- and outcome-based feedback": {
+   "ok": false,
+   "query_title": "Solving math word problems with process- and outcome-based feedback",
+   "best_sim": 0.667,
+   "best_title": "Goal selection and feedback for solving math word problems"
+  },
+  "LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks": {
+   "ok": false,
+   "query_title": "LLMs Can't Plan, But Can Help Planning in LLM-Modulo Frameworks",
+   "best_sim": 0.455,
+   "best_title": "Can LLMs Help You at Work? A Sandbox for Evaluating LLM Agents in Enterprise Environments"
+  },
+  "Lessons from the Trenches on Reproducible Evaluation of Language Models": {
+   "ok": false,
+   "query_title": "Lessons from the Trenches on Reproducible Evaluation of Language Models",
+   "best_sim": 0.1,
+   "best_title": "How can you use models in a meaningful way for your market?"
+  },
+  "NLP Evaluation in trouble: On the Need to Measure LLM Data Contamination for each Benchmark": {
+   "ok": true,
+   "doi": "10.18653/v1/2023.findings-emnlp.722",
+   "title": "NLP Evaluation in trouble: On the Need to Measure LLM Data Contamination for each Benchmark",
+   "authors": [
+    "Sainz, Oscar",
+    "Campos, Jon",
+    "García-Ferrero, Iker",
+    "Etxaniz, Julen",
+    "de Lacalle, Oier Lopez",
+    "Agirre, Eneko"
+   ],
+   "container": "Findings of the Association for Computational Linguistics: EMNLP 2023",
+   "publisher": "Association for Computational Linguistics",
+   "year": 2023,
+   "type": "proceedings-article",
+   "volume": "",
+   "issue": "",
+   "page": "10776-10787",
+   "event": "Findings of the Association for Computational Linguistics: EMNLP 2023",
+   "match_sim": 1.0,
+   "query_title": "NLP Evaluation in trouble: On the Need to Measure LLM Data Contamination for each Benchmark"
+  }
+ },
+ "generated_at": "2026-09-16 16:37:00"
+}
