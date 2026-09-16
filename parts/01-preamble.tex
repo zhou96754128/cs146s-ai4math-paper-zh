@@ -1,0 +1,37 @@
+% !TEX program = xelatex
+% C2 论文：从自然语言到可验证推理——基于语义规约的 AI 数学可靠性框架
+% 编译：tectonic -X compile paper.tex --keep-logs
+% 字体：ctexart + fontset=fandol（宏包自带字体，不依赖本机字体，保证可复现编译）
+\documentclass[11pt,fontset=fandol,a4paper]{ctexart}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds,decorations.pathreplacing}
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{plainnat}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=green!45!black,urlcolor=blue!70!black]{hyperref}
+\usepackage{xcolor}
+
+\newtheorem{definition}{定义}[section]
+\newtheorem{proposition}{推论}[section]
+
+\title{\bfseries 从自然语言到可验证推理：\\ 基于语义规约的 AI 数学可靠性框架}
+\author{周同学\thanks{本论文为 C2 挑战（AI for Mathematics）交付物。} \\ \small 课程：AI4Math}
+\date{2026 年 9 月}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+大语言模型（LLM）在数学任务上已经能给出相当高的最终答案正确率，但其自然语言推理过程本身不可被机械验证，这使“答案正确”与“推理可靠”之间出现结构性缺口。本文提出并论证一个三层可靠性模型：生成层（L1）、\textbf{语义规约层}（L2）与验证层（L3），并主张语义规约层是把不可验证的自然语言推理降为可验证对象的唯一中间环节，因而也是当前 AI for Mathematics 系统投入产出比最高的改进点。在此框架下，本文给出四项不依赖新实验数据的小贡献：（i）语义规约的四类失效模式分类（歧义未消解、类型不完整、不可逆、语义漂移）；（ii）从 V0 到 V3 的验证深度梯度，用于按成本选择验证强度；（iii）三个可度量指标（可规约率、规约保真度、反例检出率）及其定义式；（iv）一份供实践者使用的十条自检清单。本文进一步明确结论边界：不训练新模型、不声称失效模式完备、不给出大样本实证、不主张取代形式化路线，且仅覆盖“离散、可类型化、步骤可逐步状态化”的推理类型。
+
+\vspace{0.6em}
+\noindent\textbf{关键词：} AI for Mathematics；语义规约；神经符号推理；自动形式化；过程级验证；可靠性框架
+\end{abstract}
