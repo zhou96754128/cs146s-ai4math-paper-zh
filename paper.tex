@@ -1,0 +1,17 @@
+% !TEX program = xelatex
+% C2 论文顶层装配文件
+% 编译：/Users/xiaowo/.cache/c2latex/tectonic -X compile paper.tex --keep-logs
+% 结构：parts/01-preamble 为导言区（含 \begin{document} 与摘要），其余为正文各节。
+\input{parts/01-preamble}
+
+\input{parts/02-intro}
+\input{parts/03-related}
+\input{parts/04-model}
+\input{parts/05-failure}
+\input{parts/06-metrics}
+\input{parts/07-checklist}
+\input{parts/08-discussion}
+
+\bibliography{references}
+
+\end{document}
