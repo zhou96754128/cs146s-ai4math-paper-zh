@@ -1,0 +1,73 @@
+\section{验证梯度与可测指标（C-2、C-3）}\label{sec:metrics}\label{sec:gradient}
+
+\subsection{验证梯度 V0--V3（C-2）}
+
+“验证过了”在实践中含义模糊：它可能指“答案与标准答案一致”，也可能指“每一步都由内核检验”。为消除这种模糊，我们按\emph{验证器所能访问的信息}划分四个层级。
+
+\begin{table}[t]
+\centering
+\small
+\caption{验证梯度：由验证器可访问的对象与可检出的失效类别决定。右三列为该层级能否检出对应失效模式。}
+\label{tab:gradient}
+\begin{tabularx}{\textwidth}{@{}l l X c c c@{}}
+\toprule
+\textbf{层级} & \textbf{验证器输入} & \textbf{判定依据} & \textbf{F1} & \textbf{F2} & \textbf{F3/$S$ 一致性} \\
+\midrule
+V0 答案级 & 最终答案 $a$ & 与参考答案比对（可用符号等价） & 否 & 否 & 否 \\
+V1 步骤级 & 推理链 $r$ 的每一步 & 另一次模型判断或规则打分 & 部分 & 否 & 否 \\
+V2 结构化级 & 类型化中间表示 $\sigma$ & 检查 $H$ 中假设、变量类型与定义域、步骤前提 & 是 & 是 & 否 \\
+V3 内核级 & $\sigma$ 的形式化编译产物 & 证明助手/求解器内核给出判定或反例 & 是 & 是 & 部分（仅当形式化忠实） \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+需强调三点。其一，梯度是\emph{按信息访问范围}排序的，不按“模型大小”排序；V1 用更强的模型仍是 V1。其二，层级之间是包含关系而非替代关系：V3 不蕴含 V2 之外的东西，它只把 V2 的检查交给内核执行；若 $S$ 本身丢掉了假设 $H$，V3 会忠实地验证一个错误的问题。其三，V0 的局限是结构性的：F1--F4 四类失效都能产出与参考答案完全一致的答案，或与参考答案不一致但推理过程另有可取之处，答案级比对无从区分。
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  node distance=3mm,
+  st/.style={draw, rounded corners=1.5pt, minimum height=7mm, minimum width=24mm, align=center, font=\scriptsize},
+  arr/.style={-{Latex[length=2.2mm]}, thick}
+]
+\node[st, fill=gray!12] (v0) {V0 答案级\\\rotatebox{0}{\scriptsize 只看 $a$}};
+\node[st, fill=orange!15, right=9mm of v0] (v1) {V1 步骤级\\只看 $r$};
+\node[st, fill=blue!15, right=9mm of v1] (v2) {V2 结构化级\\只看 $\sigma$};
+\node[st, fill=green!15, right=9mm of v2] (v3) {V3 内核级\\看 $\sigma$ 的形式化产物};
+\draw[arr] (v0) -- (v1);
+\draw[arr] (v1) -- (v2);
+\draw[arr] (v2) -- (v3);
+\node[below=3mm of v0, font=\scriptsize, align=center, text width=24mm] {便宜\\不可归因};
+\node[below=3mm of v3, font=\scriptsize, align=center, text width=26mm] {昂贵\\可归因（若 $S$ 可逆）};
+\draw[decorate, decoration={brace, amplitude=4pt}, gray] ([yshift=-1mm]v0.south west) -- ([yshift=-1mm]v3.south east);
+\node[below=9mm of v1, font=\scriptsize, align=center, text width=70mm] {验证器可访问的信息范围递增 $\Rightarrow$ 可检出的失效类别递增};
+\end{tikzpicture}
+\caption{验证梯度 V0--V3。图中的排序依据是“验证器能访问什么”，而非模型规模或算力投入。}
+\label{fig:gradient}
+\end{figure}
+
+\subsection{可测指标（C-3）}
+
+为使上述框架可被检验，我们给出三个可计算的指标。设评测集 $\mathcal{T}$ 含 $N$ 道题，$n_{\text{obj}}$ 为可机械化判定正确性的题数。
+
+\paragraph{验证率 $V$-rate。}对每题判定其实际达到的最高验证层级 $\ell(t) \in \{0,1,2,3\}$，则
+\[
+V\text{-rate} \;=\; \frac{1}{N}\sum_{t \in \mathcal{T}} \frac{\ell(t)}{3} .
+\]
+该指标不直接度量“对不对”，而度量“有多少结论是\emph{被机械检查过}的”。它把“靠模型自我评估”与“靠内核判定”区分开，从而暴露那种“准确率很高但全部结论都无验证”的状态。
+
+\paragraph{规约保真度 $\mathrm{Fid}$。}在有标准规约 $\sigma^\star$ 的题子集 $\mathcal{T}_s$ 上，
+\[
+\mathrm{Fid} \;=\; \frac{1}{|\mathcal{T}_s|}\sum_{t \in \mathcal{T}_s} \mathrm{match}\big(\hat{\sigma}_t,\ \sigma^\star_t\big),
+\]
+其中 $\mathrm{match}$ 按三个层次分别计分：假设集 $H$ 的集合一致性、变量类型与定义域的完备性、变换序列 $\tau$ 的步骤对齐率。$\mathrm{Fid}$ 是直接度量 L2 的指标，也是唯一能定位 F1/F2 的量。
+
+\paragraph{反例检出率 $\mathrm{CDR}$。}构造一批\textbf{带已知缺陷}的规约样本（例如故意漏写一条假设、把定义域扩到全域、在化简中悄悄加一个正性假设），记缺陷样本数为 $n_{\text{flaw}}$，其中被验证流程判定为 fail 或给出反例的数目为 $n_{\text{caught}}$，则
+\[
+\mathrm{CDR} \;=\; \frac{n_{\text{caught}}}{n_{\text{flaw}}} .
+\]
+$\mathrm{CDR}$ 是唯一能区分“验证流程只是走过场”与“验证流程真的在拦截错误”的指标：一个对任何输入都返回 pass 的验证器，其 $V$-rate 与准确率都可以很高，但 $\mathrm{CDR} = 0$。
+
+三个指标的关系值得说明：$V$-rate 度量覆盖面，$\mathrm{Fid}$ 度量 L2 的质量，$\mathrm{CDR}$ 度量验证的鉴别力。三者不能相互替代——高 $V$-rate 配零 $\mathrm{CDR}$ 恰恰刻画了“形式化的空转”，而高 $\mathrm{Fid}$ 配低 $V$-rate 则刻画了“规约做得对但没有机械检查可用”。我们不对 $\mathcal{T}$、$\mathcal{T}_s$ 的规模作经验主张（见第 \ref{sec:limits} 节边界声明 3），指标的定义本身不依赖规模。
+
+\paragraph{适用条件。}$V$-rate 需要能标注每题达到的验证层级，这在有执行日志时可直接读出；$\mathrm{Fid}$ 需要标准规约，只适用于有权威形式化版本的题；$\mathrm{CDR}$ 需要人工构造缺陷样本，成本较高但一次构造可长期复用。三者中 $\mathrm{Fid}$ 与 $\mathrm{CDR}$ 的采集成本显著高于 $V$-rate，因此合理的实践顺序是先报 $V$-rate，再对重点题集补 $\mathrm{Fid}$ 与 $\mathrm{CDR}$。
