@@ -1,0 +1,33 @@
+\section{相关工作}\label{sec:related}
+
+本节按四条线索梳理既有工作，并在每条末尾指明本文的差异点。
+
+\subsection{生成式推理：从答案到推理链}
+
+CoT 提示\citep{wei2022chain}与零样本推理\citep{kojima2022large}确立了“先写推理再给答案”这一范式，此后的一系列工作沿推理结构继续改进：把推理与代码执行、结果自核验结合起来攻克难题\citep{zhou2023solving}，把推理步骤逐步验证后再聚合\citep{lightman2023let,uesato2022solving}。这些工作共同提升了基准准确率，但它们对推理过程的“验证”始终发生在自然语言层面。
+
+\paragraph{与本文的差异。}上述工作把推理链当作待生成的对象，本文把推理链当作待\emph{规约}的对象。差异不在于模型是否更强，而在于是否引入一个把自然语言推理映射到可检查表示的外部环节。
+
+\subsection{工具增强与神经符号路线}
+
+把部分推理步骤外推到可执行程序是一条有效的正交改进。程序化思维提示让模型输出可执行的伪代码并交由解释器求值\citep{chen2022program}；PAL 进一步让模型调用外部语言运行时完成计算\citep{gao2022pal}；Toolformer 则让模型自学何时调用何种 API\citep{schick2023toolformer}。这类方法的关键收益在于：一旦计算落到程序上，该步就获得了外部可执行语义，从而可被独立复现。
+
+\paragraph{与本文的差异。}工具增强引入了外部性，但外部性只覆盖\emph{计算步}，不覆盖\emph{建模步}——即“用什么变量、什么假设、什么目标”这一定义问题。本文的 L2 正是针对建模步。
+
+\subsection{形式化与自动形式化}
+
+形式化路线以证明助手为核心。Lean 4\citep{moura2021lean}与其数学库 mathlib\citep{mathlib2020lean}构成了当前最活跃的生态；Curry--Howard 对应为其提供了证明即程序的语义基础\citep{wadler2015propositions}，Coq 及其教材则代表另一条成熟路径\citep{bertot2004interactive}。在自动化方面，GPT-f 最早展示了语言模型生成形式证明的可行性\citep{polu2020generative}；DSP 提出“自然语言草稿 + 形式证明”的双通道协作\citep{jiang2022draft}；也有工作把定理证明组织为上下文学习智能体的交互过程\citep{thakur2023context}；LeanDojo 通过检索增强改善前提选择\citep{yang2023leandojo}；DeepSeek-Prover 则利用证明助手的反馈信号做大规模训练\citep{xin2024deepseek}。在基准与几何领域，MiniF2F 提供了跨系统的形式化竞赛数学基准\citep{zheng2021minif}，AlphaGeometry 则在欧氏几何上结合了符号推理引擎与语言模型\citep{trinh2024solving}。
+
+自动形式化本身也被独立研究：Szegedy 提出将自然语言数学陈述自动翻译为形式陈述的路径\citep{szegedy2020promising}，后续工作用 LLM 直接完成这一翻译\citep{wu2022autoformalization}；更近的一支工作把自动形式化用于\emph{定量推理的落地}——先把问题的形式陈述解耦出来交由求解器检验，再用形式侧的结果约束自然语言侧的输出\citep{zhou2024don}。此外，LLM 的规划能力及其与形式验证器的组合边界也被系统讨论\citep{kambhampati2024llms}。
+
+\paragraph{与本文的差异。}自动形式化可以视为 L2 的一种极端实现：它要求规约结果完整落在形式系统内。这条路线的困难在于覆盖性与正确性同时受限。本文不假设规约必须终点为形式系统，而允许规约结果为“类型化中间表示”，其正确性由约束检查而非内核证明来担保——从而把 L2 从“能否形式化”的成败判定，转为“规约到什么程度”的连续取舍。
+
+\subsection{过程级验证与评测可靠性}
+
+过程级验证通过训练验证器对中间步骤打分\citep{lightman2023let,uesato2022solving}，在数学推理上优于只检验最终答案的基线。但验证器自身是模型，其判断不可外部复核；Stechly 等与 Kambhampati 等也从不同角度指出，纯自然语言层面的自我批评难以替代外部检查\citep{stechly2023gpt,kambhampati2024llms}。与此同时，评测本身的可信度也受到挑战：数据污染会抬高分数\citep{sainz2023nlp}，指令措辞的细微变化会显著影响模型表现\citep{ni2023evaluating}，可复现评测的实施存在大量工程陷阱\citep{biderman2024lessons}。
+
+\paragraph{与本文的差异。}本文主张验证的可靠性来自\emph{外部性}而非\emph{模型强度}，并把“验证强度”显式化为可选择的梯度（第 \ref{sec:gradient} 节），使研究者能按成本而非按信念来选择验证层次。
+
+\subsection{小结}
+
+四条线索的共识是：自然语言推理链不足以支撑可靠的数学推理。分歧在于补救手段——更强模型、更多工具、还是更彻底的验证。本文的立场是：在生成层与验证层之间补上语义规约层，并把它作为可独立设计、可独立评测的对象。
