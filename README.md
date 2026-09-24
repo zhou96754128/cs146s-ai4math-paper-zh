@@ -53,6 +53,18 @@ out/                   编译与核验的中间报告
 当前状态：31 条全部核验通过，未核验 0 条；`paper.bbl` 31 条 bibitem，
 "未被引用条目"与"被引但库中缺失"均为空。
 
+## 第 8 节实测与核验硬约束（第三轮新增）
+
+针对"框架停留在定义层、没有实测"的短板，第三轮补了一节**可复跑的缺陷注入实验**，并把引用核验从"运行脚本"升级为编译流程的硬约束：
+
+- `parts/07b-experiment.tex`：缺陷注入实验——8 个注入臂、注入 210 处、拦截 173 处、检出率 **82.4%**；盲区臂 D6 检出 0，**如实计入分母不剔除**；基线误报 0。
+- `pipeline/build.py`：引用核验是**编译前硬门禁**——核验不通过即退出码 20 中止，不进入编译环。
+- `pipeline/gate_negative_test.py`：门禁负向验证（故意注入 1 个悬空引用 → 退出码 20、编译环未执行），证明门禁真的会拦。
+- `pipeline/defect_injection.py`、`pipeline/probe_pages.py`：实验与结构探针脚本，输入与命令写在文件内，可独立复跑。
+- 证据目录 `out/experiment/`：`gate-report.json`、`gate-negative-test.txt`、`defect-injection.json`、`page-probe.json` 等，均为脚本产出的真实回显。
+
+当前编译终态：**19 页 / 697674 B / 31 条 bibitem / 未定义引用 0 / underfull 0 / overfull 1**（不阻断，已在 `gate-report.json` 的 `reasons` 中显式记录）。
+
 ## 结论边界（如实声明）
 
 1. 本文是**框架 + 定义 + 指标设计**，**不含大规模实验测量**；V-rate / Fidelity / CDR
