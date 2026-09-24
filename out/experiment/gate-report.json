@@ -1,0 +1,31 @@
+{
+  "gate_only": false,
+  "tectonic": "/Users/xiaowo/.cache/c2latex/tectonic",
+  "citation_gate": {
+    "exit_code": 0,
+    "tail": [
+      "条目 31 / 被引 key 31 / FAIL 级发现 0",
+      "RESULT: PASS"
+    ]
+  },
+  "compile": {
+    "exit_code": 0,
+    "tail": [
+      "note: Writing `paper.log` (32.46484375 KiB)",
+      "note: Writing `paper.aux` (17.673828125 KiB)",
+      "note: Writing `paper.pdf` (681.322265625 KiB)"
+    ]
+  },
+  "artifacts": {
+    "pages": 19,
+    "bibitems": 31,
+    "undefined_refs": 0,
+    "underfull_hbox": 0,
+    "overfull_hbox": 1,
+    "pdf_bytes": 697674
+  },
+  "result": "PASS",
+  "reasons": [
+    "排版告警：underfull 0、overfull 1（不阻断，但需记录）"
+  ]
+}
