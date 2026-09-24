@@ -1,0 +1,53 @@
+{
+  "total_labels": 23,
+  "probe": {
+    "fig:gradient": {
+      "number": "2",
+      "page": 9
+    },
+    "tab:failures": {
+      "number": "1",
+      "page": 6
+    },
+    "tab:gradient": {
+      "number": "2",
+      "page": 8
+    },
+    "tab:injection": {
+      "number": "4",
+      "page": 13
+    },
+    "sec:failure": {
+      "number": "4",
+      "page": 6
+    },
+    "sec:mutex": {
+      "number": "4.3",
+      "page": 7
+    },
+    "sec:metrics": {
+      "number": "5",
+      "page": 8
+    },
+    "sec:experiment": {
+      "number": "8",
+      "page": 12
+    },
+    "sec:checklist": {
+      "number": "6",
+      "page": 10
+    }
+  },
+  "missing": [],
+  "duplicate_labels": [],
+  "shared_numbers": {
+    "2": [
+      "fig:gradient",
+      "tab:gradient"
+    ],
+    "4": [
+      "tab:injection",
+      "sec:failure"
+    ]
+  }
+}
