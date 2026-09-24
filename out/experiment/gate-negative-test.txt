@@ -1,0 +1,63 @@
+# 硬门禁负向验证：引用核验失败 ⇒ 编译环不执行
+
+结论：**PASS —— 门禁是流程约束，不是事后检查**
+
+同一环境、同一 `pipeline/build.py`、同一命令，仅改输入：
+
+## A 基线（未变异） —— 符合预期
+
+| 观测项 | 值 |
+|---|---|
+| build.py 退出码 | `0` |
+| 报告 result | `PASS` |
+| 引用核验环退出码 | `0` |
+| 报告中存在 compile 环 | `True` |
+| 输出出现 `[2/3]` 编译环 | `True` |
+
+核验环 tail：
+
+```
+[
+  "条目 31 / 被引 key 31 / FAIL 级发现 0",
+  "RESULT: PASS"
+]
+```
+
+build.py 输出末尾：
+
+```
+[1/3] 引用核验 -> exit 0 (PASS)
+[2/3] 编译 paper.tex -> exit 0
+[3/3] 产物复核 pages=19 bibitems=31 undefined=0 underfull=0 overfull=1
+  - 排版告警：underfull 0、overfull 1（不阻断，但需记录）
+RESULT: PASS
+```
+
+## B 变异：正文注入未登记引用 \cite{zzz_gate_negative_probe_2026} —— 符合预期
+
+| 观测项 | 值 |
+|---|---|
+| build.py 退出码 | `20` |
+| 报告 result | `FAIL` |
+| 引用核验环退出码 | `20` |
+| 报告中存在 compile 环 | `False` |
+| 输出出现 `[2/3]` 编译环 | `False` |
+
+核验环 tail：
+
+```
+[
+  "条目 31 / 被引 key 32 / FAIL 级发现 1",
+  "  [R1] zzz_gate_negative_probe_2026: 正文引用但库中不存在（悬空引用）",
+  "RESULT: FAIL"
+]
+```
+
+build.py 输出末尾：
+
+```
+[1/3] 引用核验 -> exit 20 (FAIL)
+  - 引用核验未通过（exit 20）：按硬门禁中止，不进入编译
+RESULT: FAIL
+```
+
