@@ -1,0 +1,76 @@
+{
+  "generated_from": "references.bib + parts/*.tex + lit/refs.json（冻结快照）",
+  "entry_count": 31,
+  "baseline_fail_findings": 0,
+  "baseline_false_positive_rate": 0.0,
+  "arms": [
+    {
+      "arm": "D1 悬空引用（引用不存在的条目）",
+      "expect_code": "R1",
+      "mutants": 31,
+      "detected": 31,
+      "rate": 1.0,
+      "note": "每条真实条目注入 1 个幽灵 key"
+    },
+    {
+      "arm": "D2 幽灵条目（库中有、正文未引）",
+      "expect_code": "R2",
+      "mutants": 31,
+      "detected": 31,
+      "rate": 1.0,
+      "note": "逐条摘除正文引用"
+    },
+    {
+      "arm": "D3a DOI 格式非法",
+      "expect_code": "R5",
+      "mutants": 12,
+      "detected": 12,
+      "rate": 1.0,
+      "note": "改写为不合法的 DOI 字面量"
+    },
+    {
+      "arm": "D3b 编造 DOI（格式合法、登记不存在）",
+      "expect_code": "R6",
+      "mutants": 12,
+      "detected": 6,
+      "rate": 0.5,
+      "note": "替换为格式合法但快照中查不到的 DOI"
+    },
+    {
+      "arm": "D4a 标题张冠李戴",
+      "expect_code": "R7",
+      "mutants": 31,
+      "detected": 31,
+      "rate": 1.0,
+      "note": "与相邻条目轮换标题"
+    },
+    {
+      "arm": "D4b 年份漂移 +7",
+      "expect_code": "R7",
+      "mutants": 31,
+      "detected": 31,
+      "rate": 1.0,
+      "note": "年份伪造"
+    },
+    {
+      "arm": "D5 重复 key",
+      "expect_code": "R3",
+      "mutants": 31,
+      "detected": 31,
+      "rate": 1.0,
+      "note": "追加同名条目"
+    },
+    {
+      "arm": "D6 语义错配（条目真实、主张错配）",
+      "expect_code": "（无）",
+      "mutants": 31,
+      "detected": 0,
+      "rate": 0.0,
+      "note": "结构核验在设计上不可检出；须由人工\"标题-主张字面比对\"捕获（本轮实测已抓出 4 例）"
+    }
+  ],
+  "body_mutants": 210,
+  "body_detected": 173,
+  "detection_rate": 0.8238095238095238,
+  "blind_spot_arm": "D6"
+}
